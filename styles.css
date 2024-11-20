@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3; /* Light background */
+}
+
+header {
+    background: #4a90e2; /* Header color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Set position relative for absolute positioning of cart */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#cart {
+    position: absolute; /* Position cart in the top right corner */
+    right: 20px;
+    top: 10px;
+}
+
+#cart-button {
+    background-color: #f39c12; /* Button color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cart-button:hover {
+    background-color: #e67e22; /* Hover effect */
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 220px;
+    text-align: center; /* Center text in product cards */
+    cursor: pointer; /* Change cursor to pointer */
+    background-color: white;
+    transition: transform 0.2s, background-color 0.2s; /* Smooth transform */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+.product img {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+ 
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Center the modal */
+    padding: 15px; /* Reduced padding */
+    border: 1px solid #888;
+    width: 60%; /* Reduced width */
+    max-width: 400px; /* Set a maximum width for the modal */
+    position: relative; /* For positioning the close button */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for height */
+}
+
+/* Centering the cart content */
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 20px 0; /* Add some margin */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-modal-image {
+    max-width: 150px; /* Set a fixed width for the image */
+    height: auto;
+    margin-right: 20px; /* Space between image and details */
+}
+
+.product-modal-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.product-modal-details {
+    flex: 1; /* Allow details to take remaining space */
+    text-align: center; /* Center text in details */
+}
+
+.product-modal-details h2 {
+    font-size: 1.5em; /* Increase font size for product name */
+}
+
+.product-modal-details p {
+    font-size: 1.2em; /* Increase font size for price */
+}
+
+.product-modal-details h3 {
+    margin-top: 20px; /* Add space above specifications */
+}
+
+/* Cart item styles */
+.cart-item {
+    margin: 10px 0; /* Space between cart items */
+    text-align: center; /* Center text in cart items */
+}
+
+.remove-button {
+    background -color: #e74c3c; /* Red background for remove button */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Increase padding for larger button */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em; /* Increase font size */
+}
+
+.remove-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Centering the headings in the cart */
+.cart-heading, .total-heading {
+    text-align: center; /* Center the headings */
+    font-size: 1.8em; /* Increase font size for better visibility */
+    margin: 0px 0; /* Add margin for spacing */
+}
+
+/* Blur effect for the main content when modal is open */
+#main-content.blur {
+    filter: blur(5px); /* Apply blur effect */
+    transition: filter 0.3s; /* Smooth transition */
+}
